@@ -3,6 +3,7 @@ package com.Vtiger.TC;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -35,7 +36,9 @@ public class TC001_CreateOrganisationTest  extends BaseClass {
 		hp.getOrgTab().click();
 		String txt = eutil.readExcelData("TC002", 2, 4);
 		op.searchForOrg(Orgname, txt);
-		WebElement result = cp.getSearchResults();
+		
+		WebElement result = null;
+		result	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizations']"));
 		System.out.println(result.isDisplayed());
 		String actual = result.getText();
 		Assert.assertEquals(Orgname, actual);
@@ -59,10 +62,11 @@ public class TC001_CreateOrganisationTest  extends BaseClass {
 		hp.getOrgTab().click();
 		String txt = eutil.selValueForDD("TC002", 4, "Phone");
 		op.searchForOrg(phoneNum, txt);
-		WebElement result = cp.getPhoneNumResults();
+		WebElement result = null;
+		result	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizations']"));
 		System.out.println(result.isDisplayed());
 		String actual = result.getText();
-		Assert.assertEquals(phoneNum, actual);
+		Assert.assertEquals(Orgname, actual);
 		
 	}
 

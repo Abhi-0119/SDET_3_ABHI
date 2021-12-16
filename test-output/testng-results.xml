@@ -1,117 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-13T11:41:42 IST" name="Default suite" finished-at="2021-12-13T11:44:42 IST" duration-ms="180223">
+  <suite started-at="2021-12-16T11:29:16 IST" name="Default suite" finished-at="2021-12-16T11:32:12 IST" duration-ms="175846">
     <groups>
-      <group name="Smoke Testing">
-        <method signature="TC003_CreateContactWithOrganisationTest.createContactOnly()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" name="createContactOnly" class="com.Vtiger.TC.TC003_CreateContactWithOrganisationTest"/>
-      </group> <!-- Smoke Testing -->
+      <group name="Regression Testing">
+        <method signature="TC001_CreateOrganisationTest.OrgnameWithNum()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" name="OrgnameWithNum" class="com.Vtiger.TC.TC001_CreateOrganisationTest"/>
+      </group> <!-- Regression Testing -->
     </groups>
-    <test started-at="2021-12-13T11:41:42 IST" name="Default test" finished-at="2021-12-13T11:44:42 IST" duration-ms="180223">
-      <class name="com.Vtiger.TC.TC003_CreateContactWithOrganisationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:41:42 IST" name="setUp" finished-at="2021-12-13T11:41:42 IST" duration-ms="49" status="PASS">
+    <test started-at="2021-12-16T11:29:16 IST" name="Default test" finished-at="2021-12-16T11:32:12 IST" duration-ms="175846">
+      <class name="com.Vtiger.TC.TC001_CreateOrganisationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:29:16 IST" name="setUp" finished-at="2021-12-16T11:29:16 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="launcBrowser_URL()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:41:42 IST" name="launcBrowser_URL" finished-at="2021-12-13T11:42:08 IST" duration-ms="26190" status="PASS">
+        <test-method is-config="true" signature="launcBrowser_URL()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:29:16 IST" name="launcBrowser_URL" finished-at="2021-12-16T11:29:34 IST" duration-ms="17698" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcBrowser_URL -->
-        <test-method is-config="true" signature="loginToApp()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:42:08 IST" name="loginToApp" finished-at="2021-12-13T11:42:25 IST" duration-ms="16842" status="PASS">
+        <test-method is-config="true" signature="loginToApp()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:29:34 IST" name="loginToApp" finished-at="2021-12-16T11:29:47 IST" duration-ms="13794" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToApp -->
-        <test-method signature="createContactOnly()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:42:25 IST" name="createContactOnly" finished-at="2021-12-13T11:44:23 IST" duration-ms="118081" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="row_52"]/td[4]/a"}
-  (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'SUNNY-PC', ip: '192.168.154.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ccc85061c45145cb1869cd01d033f34, findElement {using=xpath, value=//*[@id="row_52"]/td[4]/a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\sunny\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:9260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9260/devtool..., se:cdpVersion: 92.0.4515.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3ccc85061c45145cb1869cd01d033f34]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="row_52"]/td[4]/a"}
-  (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'SUNNY-PC', ip: '192.168.154.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ccc85061c45145cb1869cd01d033f34, findElement {using=xpath, value=//*[@id="row_52"]/td[4]/a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\sunny\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:9260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9260/devtool..., se:cdpVersion: 92.0.4515.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3ccc85061c45145cb1869cd01d033f34
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
-at com.Vtiger.TC.TC003_CreateContactWithOrganisationTest.createContactOnly(TC003_CreateContactWithOrganisationTest.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="OrgnameWithNum()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:29:47 IST" name="OrgnameWithNum" finished-at="2021-12-16T11:31:48 IST" duration-ms="120749" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContactOnly -->
-        <test-method is-config="true" signature="logoutFromApp()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:44:23 IST" name="logoutFromApp" finished-at="2021-12-13T11:44:41 IST" duration-ms="18094" status="PASS">
+        </test-method> <!-- OrgnameWithNum -->
+        <test-method is-config="true" signature="logoutFromApp()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:31:48 IST" name="logoutFromApp" finished-at="2021-12-16T11:32:06 IST" duration-ms="17666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutFromApp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:44:41 IST" name="closeBrowser" finished-at="2021-12-13T11:44:42 IST" duration-ms="817" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:32:06 IST" name="closeBrowser" finished-at="2021-12-16T11:32:12 IST" duration-ms="5769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="disconnectFromDB()[pri:0, instance:com.Vtiger.TC.TC003_CreateContactWithOrganisationTest@2dc54ad4]" started-at="2021-12-13T11:44:42 IST" name="disconnectFromDB" finished-at="2021-12-13T11:44:42 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="disconnectFromDB()[pri:0, instance:com.Vtiger.TC.TC001_CreateOrganisationTest@29215f06]" started-at="2021-12-16T11:32:12 IST" name="disconnectFromDB" finished-at="2021-12-16T11:32:12 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disconnectFromDB -->
-      </class> <!-- com.Vtiger.TC.TC003_CreateContactWithOrganisationTest -->
+      </class> <!-- com.Vtiger.TC.TC001_CreateOrganisationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -9,7 +9,7 @@ public class SelectOgrForContactPage {
 	WebDriver driver;
 	@FindBy(id="search_txt") private WebElement OrgnameTxtBox;
 	@FindBy(name="search") private WebElement searchNowBtn;
-	@FindBy(id="1") private WebElement resultsField;
+	@FindBy(xpath="//a[text()='SDET3']") private WebElement resultsField;
 	public WebDriver getDriver() {
 		return driver;
 	}

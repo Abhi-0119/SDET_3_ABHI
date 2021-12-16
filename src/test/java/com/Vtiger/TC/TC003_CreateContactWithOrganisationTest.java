@@ -1,5 +1,6 @@
 package com.Vtiger.TC;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -53,7 +54,7 @@ public class TC003_CreateContactWithOrganisationTest extends BaseClass
 		hp.getContactTab().click();
 		//verify
 		cip.searchForContact(Lname,"Last Name");
-		WebElement result = cip.getContactSearchResults();
+		WebElement result =driver.findElement(By.xpath("//a[@title='Contacts' and text()='\"+Lname+\"']"));
 		System.out.println(result.isDisplayed());
 		String actual = result.getText();
 		Assert.assertEquals(Lname, actual);
@@ -80,7 +81,7 @@ public class TC003_CreateContactWithOrganisationTest extends BaseClass
 		hp.getContactTab().click();
 		//verify
 		cip.searchForContact(Lname,"Last Name");
-		WebElement result = cip.getContactSearchResults();
+		WebElement result = driver.findElement(By.xpath("//a[@title='Contacts' and text()='"+Lname+"']"));
 		System.out.println(result.isDisplayed());
 		String actual = result.getText();
 		Assert.assertEquals(Lname, actual);

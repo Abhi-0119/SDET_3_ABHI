@@ -13,7 +13,7 @@ public class HomePage
 	
 	@FindBy(xpath= "//a[text()='Organizations']") private WebElement orgTab;
 	@FindBy(xpath= "//a[text()='Contacts']") private WebElement ContactTab;
-	@FindBy(xpath= "//img[@style='padding: 0px;padding-left:5px']") private WebElement userimg;
+	@FindBy(xpath="//img[@src='themes/softed/images/user.PNG']") private WebElement userimg;
 	@FindBy(xpath="//a[text()='Sign Out']") private WebElement signoutLink;
 	
 	public WebElement getOrgTab() {

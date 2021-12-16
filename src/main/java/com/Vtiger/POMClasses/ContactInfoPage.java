@@ -2,6 +2,7 @@ package com.Vtiger.POMClasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,11 +12,11 @@ public class ContactInfoPage {
 	
 	
 	WebDriver driver;
-	@FindBy(xpath="//img[@alt='Create Contact...']") private WebElement createContactimg;
+	@FindAll({@FindBy(xpath="//img[@title='Create Contact...']"), @FindBy(id="Submit")}) private WebElement createContactimg;
 	@FindBy(name="search_text") private WebElement searchContactField;
 	@FindBy(id="bas_searchfield") private WebElement contactDDValue;
 	@FindBy(name="submit") private WebElement contactSubmitBtn;
-	@FindBy(xpath="//*[@id=\"row_52\"]/td[4]/a") private WebElement contactSearchResults;
+	//@FindBy(xpath="//a[@title='Contacts' and text()='"+Lname+"']") private WebElement contactSearchResults;
 
 	public ContactInfoPage(WebDriver driver) {
 		this.driver =driver;
@@ -36,9 +37,9 @@ public class ContactInfoPage {
 	public WebElement getContactSubmitBtn() {
 		return contactSubmitBtn;
 	}
-	public WebElement getContactSearchResults() {
-		return contactSearchResults;
-	}
+//	public WebElement getContactSearchResults() {
+//		return contactSearchResults;
+//	}
 	
 	public void searchForContact(String contactname, String searchTypeDD)
 	{
