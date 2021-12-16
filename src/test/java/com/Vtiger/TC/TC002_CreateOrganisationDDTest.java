@@ -1,5 +1,6 @@
 package com.Vtiger.TC;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,7 +27,8 @@ public class TC002_CreateOrganisationDDTest extends BaseClass {
 		CreateContactPage ccp = new CreateContactPage(driver);
 		String Orgname = JavaUtil.objForJavaUtil().genrateFirstName()+JavaUtil.objForJavaUtil().generateRandomNumber(1000);
 		hp.getOrgTab().click();
-		cp.createOrg(Orgname);
+		cp.getCreateOrgimg().click();
+		cp.getAccountName().sendKeys(Orgname);
 		String txt0 = eutil.readExcelData("TC002", JavaUtil.objForJavaUtil().generateRandomNumber(33), 1);
 		wutil.selectValueFrmDD(txt0,ccp.getIndustryTypeDD() );
 		String txt1 = eutil.readExcelData("TC002", JavaUtil.objForJavaUtil().generateRandomNumber(12), 2);
@@ -35,9 +37,11 @@ public class TC002_CreateOrganisationDDTest extends BaseClass {
 		wutil.selectValueFrmDD(txt2, ccp.getRatingTypeDD());
 		cp.getSaveBtn().click();
 		wutil.refresh();
+		hp.getOrgTab().click();
 		String txt = eutil.readExcelData("TC002", 2, 4);
 		op.searchForOrg(Orgname, txt);
-		WebElement result = cp.getSearchResults();
+		WebElement result = null;
+		result	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizations']"));
 		System.out.println(result.isDisplayed());
 		String actual = result.getText();
 		Assert.assertEquals(Orgname, actual);

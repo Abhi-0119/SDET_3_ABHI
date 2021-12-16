@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Vtiger.TC.TC003_CreateContactWithOrganisationTest">
+      <class name="com.Vtiger.TC.TC002_CreateOrganisationDDTest">
         <methods>
-          <include name="createContactOnly"/>
           <include name="loginToApp"/>
           <include name="setUp"/>
           <include name="logoutFromApp"/>
           <include name="disconnectFromDB"/>
           <include name="closeBrowser"/>
           <include name="launcBrowser_URL"/>
+          <include name="createOrgWithDD"/>
         </methods>
-      </class> <!-- com.Vtiger.TC.TC003_CreateContactWithOrganisationTest -->
+      </class> <!-- com.Vtiger.TC.TC002_CreateOrganisationDDTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

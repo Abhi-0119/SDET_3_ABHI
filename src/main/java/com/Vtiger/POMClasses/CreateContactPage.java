@@ -7,15 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CreateContactPage {
 	WebDriver driver;
-	@FindBy(name="salutationtype") private WebElement salutedd;
+	@FindBy(xpath="//select[@name='salutationtype']") private WebElement salutedd;
 	@FindBy(name="firstname") private WebElement frstNameTxtBox;
 	@FindBy(name="lastname") private WebElement  lastNameTxtBox;
 	@FindBy(xpath="//img[@alt='Select']") private WebElement selectOrgforContactimg;
 	@FindBy(xpath="//input[@title='Save [Alt+S]']") private WebElement saveContactBtn;
 	
-	@FindBy(name="industry") private WebElement industryTypeDD;
-	@FindBy(name="accounttype") private WebElement accountTypeDD;
-	@FindBy(name="rating") private WebElement ratingTypeDD;
+	@FindBy(xpath="//select[@name='industry']") private WebElement industryTypeDD;
+	@FindBy(xpath="//select[@name='accounttype']") private WebElement accountTypeDD;
+	@FindBy(xpath="//select[@name='rating']") private WebElement ratingTypeDD;
 	
 	
 	public WebElement getIndustryTypeDD() {
