@@ -17,6 +17,12 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v86 -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-devtools-v86</artifactId>
+			<version>4.0.0-alpha-7</version>
+		</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
