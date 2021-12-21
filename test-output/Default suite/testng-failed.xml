@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Vtiger.TC.TC002_CreateOrganisationDDTest">
+      <class name="com.sdet3.practice.CalenderTest">
         <methods>
-          <include name="loginToApp"/>
-          <include name="setUp"/>
-          <include name="logoutFromApp"/>
-          <include name="disconnectFromDB"/>
-          <include name="closeBrowser"/>
-          <include name="launcBrowser_URL"/>
-          <include name="createOrgWithDD"/>
+          <include name="calenderPractice"/>
         </methods>
-      </class> <!-- com.Vtiger.TC.TC002_CreateOrganisationDDTest -->
+      </class> <!-- com.sdet3.practice.CalenderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
