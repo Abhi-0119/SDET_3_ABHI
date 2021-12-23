@@ -14,8 +14,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CalenderDataProviderObject 
 {
 	public static WebDriver driver;
-	@Test
-	public void CalwithDataProviderObject()
+	@Test(dataProvider="getValues")
+	public void CalwithDataProviderObject(String from,String to)
 	{
 		Date d = new Date();
 		//Date todayDate = Calendar.getInstance().getTime();
@@ -38,14 +38,14 @@ public class CalenderDataProviderObject
 		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
 		
 		
-		driver.findElement(By.id("fromCity")).sendKeys("HYD");
+		driver.findElement(By.id("fromCity")).sendKeys(from);
 		
-		driver.findElement(By.xpath("//div[.='HYD']")).click();
+		driver.findElement(By.xpath("//div[.='"+from+"']")).click();
 		
 		
-		driver.findElement(By.id("toCity")).sendKeys("GOI");
+		driver.findElement(By.id("toCity")).sendKeys(to);
 		
-		driver.findElement(By.xpath("//div[.='GOI']")).click();
+		driver.findElement(By.xpath("//div[.='"+to+"']")).click();
 		
 		driver.findElement(By.xpath("//span[.='DEPARTURE']")).click();
 		
@@ -53,21 +53,23 @@ public class CalenderDataProviderObject
 	}
 	
 	@DataProvider
-	public void getValues()
+	public Object[][] getValues()
 	{
 		Object arr[] []= new Object[4] [2];
 		
-		arr[0][1] = "HYD";
-		arr[1][1] = "GOI";
+		arr[0][0] = "HYD";
+		arr[0][1] = "GOI";
 		
-		arr[0][1] = "HYD";
-		arr[1][1] = "B";
+		arr[1][0] = "HYD";
+		arr[1][1] = "BOM";
 		
-		arr[0][1] = "HYD";
-		arr[1][1] = "GOI";
+		arr[2][0] = "HYD";
+		arr[2][1] = "DEL";
 		
-		arr[0][1] = "HYD";
-		arr[1][1] = "GOI";
+		arr[3][0] = "HYD";
+		arr[3][1] = "MAA";
+		
+		return arr;
 	}
 	
 }

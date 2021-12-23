@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sdet3.practice.CalenderTest">
+      <class name="com.sdet3.practice.PauseForHandlingDD">
         <methods>
-          <include name="calenderPractice"/>
+          <include name="svgTag"/>
         </methods>
-      </class> <!-- com.sdet3.practice.CalenderTest -->
+      </class> <!-- com.sdet3.practice.PauseForHandlingDD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
